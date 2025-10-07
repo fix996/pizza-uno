@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Uno - Sabores Únicos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img id="logo" src="pizza uno logo.png" alt="Pizza Uno">
+            <span class="brand-name">PIZZA UNO</span>
+        </div>
+        
+        <button class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <nav class="main-nav" id="main-nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#" id="login-link">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>PIZZA UNO</h1>
+            <p class="tagline">"El sabor que une momentos, la tradición que perdura"</p>
+            <button class="cta-button">Ver Menú</button>
+        </div>
+    </section>
+
+    <!-- Menú Section -->
+    <section id="menu" class="menu-section">
+        <h2>Nuestro Menú</h2>
+        
+        <!-- Divisor Pizzas -->
+        <div class="menu-divider">
+            <div class="divider-icon">
+                <i class="fas fa-pizza-slice"></i>
+            </div>
+            <div class="divider-text">Pizzas</div>
+        </div>
+        
+        <div class="menu-category" id="pizzas">
+            <!-- Las pizzas se cargarán aquí dinámicamente -->
+        </div>
+
+        <!-- Divisor Sándwiches -->
+        <div class="menu-divider">
+            <div class="divider-icon">
+                <i class="fas fa-hamburger"></i>
+            </div>
+            <div class="divider-text">Sándwiches</div>
+        </div>
+        
+        <div class="menu-category" id="sandwiches">
+            <!-- Los sándwiches se cargarán aquí dinámicamente -->
+        </div>
+
+        <!-- Divisor Carnes -->
+        <div class="menu-divider">
+            <div class="divider-icon">
+                <i class="fas fa-drumstick-bite"></i>
+            </div>
+            <div class="divider-text">Carnes</div>
+        </div>
+        
+        <div class="menu-category" id="carnes">
+            <!-- Las carnes se cargarán aquí dinámicamente -->
+        </div>
+    </section>
+
+    <!-- Admin Section -->
+    <section id="admin" class="admin-section">
+        <div class="admin-login" id="admin-login">
+            <h2>Panel de Administración</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+        
+        <div class="admin-panel" id="admin-panel" style="display: none;">
+            <h2>Gestión de Productos</h2>
+            <div class="admin-controls">
+                <button id="add-product">Agregar Producto</button>
+                <button id="refresh-products">Actualizar Lista</button>
+                <button id="logout">Cerrar Sesión</button>
+            </div>
+            <div class="products-list" id="products-list">
+                <!-- Los productos se cargarán aquí dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="ubicacion" class="location-section">
+        <h2>Nuestra Ubicación</h2>
+        <div class="location-container">
+            <div class="map-container">
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1073.9028217225325!2d-64.80399054424062!3d-30.726508416578053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942dc47e08a9811d%3A0x5dffcc9220aa0d30!2sPizza%20Uno!5e1!3m2!1ses!2sar!4v1759795983512!5m2!1ses!2sar
+" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <div class="contact-methods">
+                    <a href="" target="_blank" class="contact-link whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="" target="_blank" class="contact-link instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="" target="_blank" class="contact-link facebook">
+                        <i class="fab fa-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="tel:+5491112345678" class="contact-link phone">
+                        <i class="fas fa-phone"></i>
+                        <span>+00 000 00</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="footer-content">
+            <p>&copy; 2023 Pizza Uno - Todos los derechos reservados</p>
+            <div class="social-icons">
+                <a href="https://instagram.com/pizzauno" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/pizzauno" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/5491112345678" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modal-title">Agregar Producto</h3>
+            <form id="product-form">
+                <input type="hidden" id="product-id">
+                <div class="form-group">
+                    <label for="product-name">Nombre:</label>
+                    <input type="text" id="product-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-description">Descripción:</label>
+                    <textarea id="product-description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="product-price">Precio:</label>
+                    <input type="number" id="product-price" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-category">Categoría:</label>
+                    <select id="product-category" required>
+                        <option value="pizzas">Pizzas</option>
+                        <option value="sandwiches">Sándwiches</option>
+                        <option value="carnes">Carnes</option>
+                    </select>
+                </div>
+                <button type="submit" id="save-product">Guardar Producto</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
